@@ -375,20 +375,20 @@ section {
     }
 
     .noughts-and-crosses {
-        height: 3.2em;
+        height: 3em;
         width: auto;
     }
 
     .noughts-and-crosses--container--table {
         position: absolute;
-        height: 5rem;
+        height: 4.3rem;
 
         top: 35%;
         left: -10%;
     }
 
     .noughts-and-crosses--container--close {
-        top: 89%;
+        top: 85%;
         right: 40%;
     }
 
@@ -428,11 +428,11 @@ section {
     .form-group input, textarea {
         border: 0;
         border-radius: 10px;
-        margin: 20px 0;
-        padding: 15px;
+        margin: 5% 0;
+        padding: 3%;
         outline: none;
 
-        font-size: 1.3rem;
+        font-size: 110%;
     }
 
     .form-group {
