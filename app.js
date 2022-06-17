@@ -159,7 +159,7 @@ $(document).ready(function () {
 
     function localStprageScheme(mode) {  
         $('body').attr('data-mode', mode)
-        darkModeImg.attr('src', '../assets/dark-mode-' + '.png')
+        darkModeImg.attr('src', 'assets/dark-mode-' + '.png')
         colorScheme(mode)
 
         localStorage.setItem('modeColor', mode)
@@ -177,11 +177,11 @@ $(document).ready(function () {
         setFile('noughts-and-crosses', mode)
         setFile('hello', mode)
 
-        $('.css-scheme').attr('href', '../stylesheets/' + mode + '.css')
+        $('.css-scheme').attr('href', 'stylesheets/' + mode + '.css')
     }
 
     function setFile(file, mode) {
-        return $('.' + file).attr('src', '../assets/' + file + '-' + mode + '.png')
+        return $('.' + file).attr('src', 'assets/' + file + '-' + mode + '.png')
     }
 
     function visibilityStatus(visibleNode, status) {
@@ -191,20 +191,20 @@ $(document).ready(function () {
     function clickSvgToggle() {
     $(document).click(function() {
         $('body').css({
-            'cursor': 'url(../assets/clicked.svg), auto'
+            'cursor': 'url(assets/clicked.svg), auto'
         })
     
         
         setTimeout(() =>{
             $('body').css({
-                'cursor': 'url(../assets/unclicked.svg), auto'
+                'cursor': 'url(assets/unclicked.svg), auto'
             })
         }, 150)
     })
     }
 
    function setPostit(color, title, icons) {
-       $('.' + color).css('background-image', 'url(../assets/postit-' + color + '-unfolded.png)');
+       $('.' + color).css('background-image', 'url(assets/postit-' + color + '-unfolded.png)');
        $('.' + color).css('background-repeat', 'no-repeat')
        $('.' + color).css('background-size', 'cover')
 
@@ -214,7 +214,7 @@ $(document).ready(function () {
 
    function hoverPostit(color, title, icons) {
         $('.' + color).mouseover(function() {
-            $('.' + color).css('background-image', 'url(../assets/postit-' + color + '-folded.png)');
+            $('.' + color).css('background-image', 'url(assets/postit-' + color + '-folded.png)');
             $('.' + title).css('visibility', 'hidden')
             $('.' + icons).css('visibility', 'visible')
         })
@@ -222,7 +222,7 @@ $(document).ready(function () {
 
    function leavePostit(color, title, icons) {
         $('.' + color).mouseleave(function() {
-            $('.' + color).css('background-image', 'url(../assets/postit-' + color + '-unfolded.png)');
+            $('.' + color).css('background-image', 'url(assets/postit-' + color + '-unfolded.png)');
             $('.' + title).css('visibility', 'visible')
             $('.' + icons).css('visibility', 'hidden')
         })
@@ -242,15 +242,15 @@ $(document).ready(function () {
 
    function mainContainerPictureAction(picture) {
         if ($('.' + picture).attr('data-visible') === 'true') {
-            $('.' + picture).attr('src', '../assets/' + picture + '-clicked.png')
+            $('.' + picture).attr('src', 'assets/' + picture + '-clicked.png')
         } else {
-            $('.' + picture).attr('src', '../assets/' + picture + '-unclicked.png')
+            $('.' + picture).attr('src', 'assets/' + picture + '-unclicked.png')
         }
    }
 
    function earphonesTrackPlayer() {
     if (earphones.attr('data-visible') === 'true') {
-        audioElement.setAttribute('src', '../assets/track-' + randomTrack() +'.mp3');
+        audioElement.setAttribute('src', 'assets/track-' + randomTrack() +'.mp3');
         audioElement.play();
         audioElement.addEventListener('ended', function() {
             this.play();
@@ -266,7 +266,7 @@ $(document).ready(function () {
 
     function markerSoundPlayer() {
         if (marker.attr('data-visible') === 'true') {
-            audioElement.setAttribute('src', '../assets/marker-sound.mp3');
+            audioElement.setAttribute('src', 'assets/marker-sound.mp3');
             audioElement.play();
             audioElement.addEventListener('ended', function() {
                 this.play();
@@ -278,7 +278,7 @@ $(document).ready(function () {
 
     function laptopSoundPlayer() {
         if (laptop.attr('data-visible') === 'true') {
-            audioElement.setAttribute('src', '../assets/laptop-sound.mp3');
+            audioElement.setAttribute('src', 'assets/laptop-sound.mp3');
             audioElement.play();
             audioElement.addEventListener('ended', function() {
                 this.play();
@@ -364,7 +364,7 @@ $(document).ready(function () {
         for (var i = 0; i < cells.length; i++) {
             cells[i].removeEventListener('click', turnClick, false)
         }
-        declareWinner(gameWon.player == hPlayer ? '../assets/you-win-light.png' : '../assets/you-lose-light.png')
+        declareWinner(gameWon.player == hPlayer ? 'assets/you-win-light.png' : 'assets/you-lose-light.png')
     }
     
     function checkTie() {
@@ -373,7 +373,7 @@ $(document).ready(function () {
                 cells[i].style.backgroundColor = 'green'
                 cells[i].removeEventListener('click', turnClick, false)
             }
-            declareWinner('../assets/its-a-tie-light.png')
+            declareWinner('assets/its-a-tie-light.png')
             return true
         }
         return false
