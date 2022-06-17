@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta ht tp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="app.js" language="javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link class="css-scheme" rel="stylesheet" href="../stylesheets/light.css">
+    <title>Estefany Rez</title>
+</head>
+<body data-mode="light">
+    <div id="preloader"></div>
+    <div class="container">
+        <div class="contact-form--bg flex" data-visible="false">
+            <div class="contact-form--popup">
+                <img class="contact-form--title say-hello" src="../assets/say-hello-light.png">
+                <button class="contact-form--close" aria-controls="primary-navigation"><span class="sr-only">close</span></button>
+                <form class="contact-form__fields flex" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail address</label>
+                        <input type="email" id="email" name="email" placeholder="janedoe@example.com" required>
+                    </div> 
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" name="message" placeholder="Hello..." required></textarea>
+                    </div>
+                    <input class="form-submit" type="button"><span class="sr-only">send</span></input>
+                </form>
+            </div>
+        </div>
+
+
+        <header class="flex">
+            <div class="header__logo-container">
+                <img src="../assets/logo-light.png" class="logo-container--img logo">
+            </div>
+
+            <button class="header__button" aria-controls="primary-navigation">
+                <span class="sr-only">Menu</span>
+            </button>
+
+            <nav>
+                <section id="primary-navigation" data-visible="false" class="nav__section flex">
+                    <div class="nav__section--title">
+                        <img src="../assets/about-light.png" class="title about main-trigger">
+                    </div>
+                    <div class="nav__section--title">
+                        <img src="../assets/projects-light.png" class="title projects main-trigger">
+                    </div>
+                    <div class="nav__section--title">
+                        <img id="dark-mode-img" src="../assets/dark-mode-light.png" class="title dark-mode">
+                    </div>
+                    <div class="nav__section--title">
+                        <img src="../assets/game-light.png" class="title game main-trigger">
+                    </div>
+                    <div class="nav__section--title">
+                        <img src="../assets/contact-me-light.png" class="title contact-me main-trigger">
+                    </div>
+                </section>
+            </nav>
+        </header>
+
+        <div class="main--container" data-visible="true">
+            <img src="../assets/earphones-unclicked.png" class="main--container__picture earphones" data-visible="false">
+            <img src="../assets/laptop-unclicked.png" class="main--container__picture laptop" data-visible="false">
+            <img src="../assets/marker-unclicked.png" class="main--container__picture marker" data-visible="false">
+            <div class="main--container--hyperlinks">
+                <a href="https://github.com/EstefanyRez" target="_black">
+                    <img src="../assets/icon-github.png" class="main--container--hyperlinks--icon">
+                </a>
+                <a href="https://www.linkedin.com/in/estefany-magali-perez-torres-911a411a3/" target="_black">
+                    <img src="../assets/icon-linkedin.png" class="main--container--hyperlinks--icon">
+                </a>
+            </div>
+        </div>
+
+        <div class="about--container" data-visible="false">
+            <button class="about--container--close"><span class="sr-only">close</span></button>
+            <div class="about--container--text-container">
+                <p class="about--container--text-container--paragraph">
+                    Hello, I am Estefany Perez, Mexico-based, a developer in constant growth. 
+                    I discovered what programming is about not a long time ago. I started by 
+                    learning the basics of C as it is the most common language to introduce 
+                    people to the logic of coding. I eventually decided to give web development 
+                    a go by first learning HTML, CSS and ended up going a step further with 
+                    JavaScript. As a kid I would always be interested in designing, illustration 
+                    and also I realized that I wouldn't need any courses to start doing it if I 
+                    was passionate about it. I finally found a new way of creation, my way where 
+                    I can not only implement what I wanted to become when younger but also innovation 
+                    and tech.
+                </p>
+            </div>
+            <div class="about--container--hover-animation"></div>
+        </div>
+ 
+        <div class="noughts-and-crosses--container flex" data-vi sible="false">
+            <img src="../assets/noughts-and-crosses-light.png" class="noughts-and-crosses">
+            <button class="noughts-and-crosses--container--close"><span class="sr-only">close</span></button>
+            <table class="noughts-and-crosses--container--table">
+                <tr>
+                    <td class="cell" id="0"></td>
+                    <td class="cell" id="1"></td>
+                    <td class="cell" id="2"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="3"></td>
+                    <td class="cell" id="4"></td>
+                    <td class="cell" id="5"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="6"></td>
+                    <td class="cell" id="7"></td>
+                    <td class="cell" id="8"></td>
+                </tr>
+            </table>
+            <div class="messages-container">
+                <img src="../assets/hello-light.png" class="hello">
+            </div>
+            <div class="endgame flex">
+                <img class="endgame--result" src="">
+                <button class="endgame--replay"><span class="sr-only">Replay</span></button>
+            </div>
+        </div>
+
+        <div class="projects-container" data-visible="false">
+            <button class="projects-container--close"><span class="sr-only">close</span></button>
+            <div class="projects-container__postit pink">
+                <img src="../assets/calculator.png" class="projects-container__postit--title calculator">
+                <div class="projects-container__postit__icons pinky">
+                    <a href="https://calculator-project-estefanyrez.netlify.app" target="_blank">
+                        <img src="../assets/icon-eye.png" class="icon">
+                    </a>
+                    <a href="https://github.com/EstefanyRez/portfolio/tree/master/Calculator%20by%20Fany" target="_blank">
+                        <img src="../assets/icon-github.png" class="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="projects-container__postit blue">
+                <img src="../assets/book-list.png" class="projects-container__postit--title book-list">
+                <div class="projects-container__postit__icons bluish">
+                    <a href="https://booklist-project-estefanyrez.netlify.app" target="_blank">
+                        <img src="../assets/icon-eye.png" class="icon">
+                    </a>
+                    <a href="https://github.com/EstefanyRez/portfolio/tree/master/Book%20List" target="_blank">
+                        <img src="../assets/icon-github.png" class="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="projects-container__postit orange">
+                <img src="../assets/colour-flipper.png" class="projects-container__postit--title colour-flipper">
+                <div class="projects-container__postit__icons orangy">
+                    <a href="https://colourflipper-project-estefanyrez.netlify.app" target="_blank">
+                        <img src="../assets/icon-eye.png" class="icon">
+                    </a>
+                    <a href="https://github.com/EstefanyRez/portfolio/tree/master/Color%20Flipper" target="_blank">
+                        <img src="../assets/icon-github.png" class="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="projects-container__postit green">
+                <img src="../assets/cart.png" class="projects-container__postit--title cart">
+                <div class="projects-container__postit__icons greeny">
+                    <a href="https://cart-project-estefanyrez.netlify.app" target="_blank">
+                        <img src="../assets/icon-eye.png" class="icon">
+                    </a>
+                    <a href="https://github.com/EstefanyRez/portfolio/tree/master/Cart" target="_blank">
+                        <img src="../assets/icon-github.png" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

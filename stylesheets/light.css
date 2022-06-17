@@ -1,0 +1,94 @@
+.container {
+    background-color: #fff;
+    background-image: url(../assets/bg-light.png);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+header {
+    background-image: linear-gradient(#a8b5db, #fff);
+    box-shadow: 0 4px 1.5rem 3px gray;
+}
+
+.about--container {
+    background-color: white;
+}
+
+.about--container--close {
+    background: url(../assets/icon-x-light.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about--container--hover-animation {
+    background: url(../assets/rocking-unhovered-light.jpg);
+    background-size: cover;
+}
+
+.about--container--hover-animation:hover {
+    background: url(../assets/rocking-hovered-light.jpg);
+    background-size: cover;
+}
+
+.about--container--hover-animation:hover {
+    box-shadow: -8px -8px 15px #a1a1a1;
+}
+
+.contact-form__fields--popup-message {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.projects-container--close {
+    background: url(../assets/icon-x-light.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.noughts-and-crosses--container--close {
+    background: url(../assets/icon-x-light.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 35rem) {
+    .header__button {
+        background-image: url(../assets/icon-hamburger-light.svg);
+        background-color: transparent;
+        background-size: cover;
+    }
+
+    .header__button[aria-expanded="true"] {
+        background-image: url(../assets/icon-x-light.svg);
+    }
+
+    .about--container {
+        background-color: transparent;
+    }
+}
+
+.contact-form--bg {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form--popup {
+    background-image: radial-gradient(white, #a8b5db, #697187);
+}
+
+.contact-form--close {
+    background: url(../assets/icon-x-light.svg);
+    background-size: cover;
+}
+
+.form-submit {
+    background: url(../assets/send-light.svg) ;
+    background-size: cover;
+}
+
+.form-group input, textarea {
+    background-color: #fff;
+}
+
+table {
+    background: url(../assets/cell-light.png);
+    background-size: cover;
+}
