@@ -60,8 +60,10 @@ $(document).ready(function () {
 
         if (visibility === 'false') {
             visibilityStatus(primaryNav, true)
+            toggleButton.attr('aria-expanded', true)
         } else {
             visibilityStatus(primaryNav, false)
+            toggleButton.attr('aria-expanded', false)
         }
     });
 
